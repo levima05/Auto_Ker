@@ -1,0 +1,45 @@
+{
+  "autok": [
+    {
+      "id": 1,
+      "marka" : "Audi",
+      "tipus" : "R8",
+      "uzemanyag": "Benzin",
+      "ulesekszama": 2,
+      "automatavalto": true
+    },
+    {
+      "id": 2,
+      "marka" : "Audi",
+      "tipus" : "Q7",
+      "uzemanyag": "Diesel",
+      "ulesekszama": 7,
+      "automatavalto": true
+    },
+    {
+      "id": 3,
+      "marka" : "BMW",
+      "tipus" : "E30 M3",
+      "uzemanyag": "Benzin",
+      "ulesekszama": 4,
+      "automatavalto": false
+    },
+    {
+      "id": 4,
+      "marka" : "Toyota",
+      "tipus" : "Corolla",
+      "uzemanyag": "Benzin",
+      "ulesekszama": 5,
+      "automatavalto": true
+    },
+    {
+      "id": 5,
+      "marka" : "Fiat",
+      "tipus" : "Punto",
+      "uzemanyag": "Diesel",
+      "ulesekszama": 5,
+      "automatavalto": false
+    }
+  ]
+
+}
