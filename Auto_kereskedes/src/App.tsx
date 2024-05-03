@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div>
-      <h2>Autó hozzáadása:</h2>
+      <p>Autó hozzáadása:</p>
       <input
         type="text"
         placeholder="Add meg az autó nevét"
@@ -28,7 +28,7 @@ function App() {
           setNewCar(e.currentTarget.value);
         }}
       />
-      <button
+      <br /><br /><button
         onClick={() => {
           setAutok([...autok, { id: autok.length + 1, marka: newCar, tipus: '', uzemanyag: '', ulesekszama: 0, automatavalto: false }]);
           setNewCar('');
@@ -36,42 +36,6 @@ function App() {
       >
         Felvétel
       </button>
-
-      <h2>Keresés:</h2>
-      <input
-        type="text"
-        placeholder="Add meg a keresendő autót márkáját"
-        onChange={e => {
-          setSearchTerm(e.currentTarget.value);
-        }}
-      />
-
-      <h2>Autók listája: </h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Márka</th>
-            <th>Tipus</th>
-            <th>Üzemanyag</th>
-            <th>Ülések száma</th>
-            <th>Automata váltó</th>
-          </tr>
-        </thead>
-        <tbody>
-          {kivalogatott.map(auto => (
-            <tr key={auto.id}>
-              <td>{auto.id}</td>
-              <td>{auto.marka}</td>
-              <td>{auto.tipus}</td>
-              <td>{auto.uzemanyag}</td>
-              <td>{auto.ulesekszama}</td>
-              <td>{auto.automatavalto ? 'Igen' : 'Nem'}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
     </div>
   );
 }

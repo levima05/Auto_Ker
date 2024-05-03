@@ -1,13 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Autó kereskedés</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body> 
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="index.css"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autó kereskedés</title>
+</head>
+<body>
+
+  <div class="background-image">
+    <header>
+      <nav>
+        <h1>Autókereskedés</h1>
+        <ul>
+          <li><a href="#kezdolap">Kezdőlap</a></li>
+          <li><a href="#auto_hozzadasa">Autó hozzáadása</a></li>
+          <li><a href="#autok_listaja">Autók listája</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="fullscreen-div" id="kezdolap">
+      <div class="fullscreen-text">Üdvözöljük oldalunkon ahol a flotta kezelést tudja megvalósítani.</div> 
+    </div>
+  </div>
+
+  <div class="background-image2" id="auto_hozzadasa">
+    <div class="fullscreen-div">
+      <div class="fullscreen-text" id="root"></div>
+    </div>
+  </div>
+
+  <div class="background-image3" id="autok_listaja">
+    <div class="fullscreen-div">
+      <div class="fullscreen-text" id="root2"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.tsx"></script>
+</body>
 </html>
