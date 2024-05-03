@@ -20,44 +20,44 @@ function App() {
   const kivalogatott = autok.filter(auto => auto.marka.includes(searchTerm));
 
   return (
-    <div>
-    
-      <h2>Keresés:</h2>
-      <input
-        type="text"
-        placeholder="Add meg a keresendő autót márkáját"
-        onChange={e => {
-          setSearchTerm(e.currentTarget.value);
-        }}
-      />
+    <>
+      <div>
+        <h2>Keresés:</h2>
+        <input
+          type="text"
+          placeholder="Add meg a keresendő autót márkáját"
+          onChange={e => {
+            setSearchTerm(e.currentTarget.value);
+          }}
+        />
+        <h2>Autók listája: </h2>
 
-      <h2>Autók listája: </h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Márka</th>
-            <th>Tipus</th>
-            <th>Üzemanyag</th>
-            <th>Ülések száma</th>
-            <th>Automata váltó</th>
-          </tr>
-        </thead>
-        <tbody>
-          {kivalogatott.map(auto => (
-            <tr key={auto.id}>
-              <td>{auto.id}</td>
-              <td>{auto.marka}</td>
-              <td>{auto.tipus}</td>
-              <td>{auto.uzemanyag}</td>
-              <td>{auto.ulesekszama}</td>
-              <td>{auto.automatavalto ? 'Igen' : 'Nem'}</td>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Márka</th>
+              <th>Tipus</th>
+              <th>Üzemanyag</th>
+              <th>Ülések száma</th>
+              <th>Automata váltó</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {kivalogatott.map(auto => (
+              <tr key={auto.id}>
+                <td>{auto.id}</td>
+                <td>{auto.marka}</td>
+                <td>{auto.tipus}</td>
+                <td>{auto.uzemanyag}</td>
+                <td>{auto.ulesekszama}</td>
+                <td>{auto.automatavalto ? 'Igen' : 'Nem'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
 
